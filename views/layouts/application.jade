@@ -1,0 +1,116 @@
+!!!5
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    title Bootstrap, from Twitter
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(name="description", content="")
+    meta(name="author", content="")
+    link(rel="stylesheet/less", href="/css/application.less", type="text/css")
+    link(rel="stylesheet/less", href="/css/responsive.less", type="text/css")
+    script(src="/js/libs/less-1.3.0.min.js")
+
+    //if lt IE 9
+      script(src="http://html5shim.googlecode.com/svn/trunk/html5.js")
+
+    link(rel="shortcut icon", href="/ico/favicon.ico")
+    link(rel="apple-touch-icon-precomposed", sizes="144x144", href="/ico/apple-touch-icon-144-precomposed.png")
+    link(rel="apple-touch-icon-precomposed", sizes="114x114", href="/ico/apple-touch-icon-114-precomposed.png")
+    link(rel="apple-touch-icon-precomposed", sizes="72x72", href="/ico/apple-touch-icon-72-precomposed.png")
+    link(rel="apple-touch-icon-precomposed", href="/ico/apple-touch-icon-57-precomposed.png")
+  body
+    != body
+    div.navbar.navbar-inverse.navbar-fixed-top
+      div.navbar-inner
+        div.container-fluid
+          a.btn.btn-navbar(data-toggle="collapse", data-target=".nav-collapse")
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.brand(href="#") Project name
+          div.nav-collapse.collapse
+            p.navbar-text.pull-right Logged in as 
+              a.navbar-link(href="#") Username
+            ul.nav
+              li.active
+                a(href="#") Home
+              li
+                a(href="#about") About
+              li
+                a(href="#contact") Contact
+    div.container-fluid
+      div.row-fluid
+        div.span3
+          div.well.sidebar-nav
+            ul.nav.nav-list
+              li.nav-header Sidebar
+              li.active: a(href="#") Link
+              li: a(href="#") Link
+              li: a(href="#") Link
+              li: a(href="#") Link
+              li.nav-header Sidebar
+              li: a(href="#") Link
+              li: a(href="#") Link
+              li: a(href="#") Link
+              li: a(href="#") Link
+              li: a(href="#") Link
+              li: a(href="#") Link
+              li.nav-header Sidebar
+              li: a(href="#") Link
+              li: a(href="#") Link
+              li: a(href="#") Link
+        div.span9
+          div.hero-unit
+            h1 Hello, world!
+            p This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.
+            p 
+              a.btn.btn-primary.btn-large Learn more &raquo;
+          div.row-fluid
+            div.span4
+              h2 Heading
+              p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+              p
+                a.btn(href="#") View details &raquo;
+            div.span4
+              h2 Heading
+              p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+              p
+                a.btn(href="#") View details &raquo;
+            div.span4
+              h2 Heading
+              p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+              p
+                a.btn(href="#") View details &raquo;
+          div.row-fluid
+            div.span4
+              h2 Heading
+              p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+              p
+                a.btn(href="#") View details &raquo;
+            div.span4
+              h2 Heading
+              p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+              p
+                a.btn(href="#") View details &raquo;
+            div.span4
+              h2 Heading
+              p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+              p
+                a.btn(href="#") View details &raquo;
+      hr
+      footer
+        p &copy; Company 2012
+
+    script(src="/js/libs/jquery.js")
+    script(src="/js/libs/bootstrap/bootstrap-transition.js")
+    script(src="/js/libs/bootstrap/bootstrap-alert.js")
+    script(src="/js/libs/bootstrap/bootstrap-modal.js")
+    script(src="/js/libs/bootstrap/bootstrap-dropdown.js")
+    script(src="/js/libs/bootstrap/bootstrap-scrollspy.js")
+    script(src="/js/libs/bootstrap/bootstrap-tab.js")
+    script(src="/js/libs/bootstrap/bootstrap-tooltip.js")
+    script(src="/js/libs/bootstrap/bootstrap-popover.js")
+    script(src="/js/libs/bootstrap/bootstrap-button.js")
+    script(src="/js/libs/bootstrap/bootstrap-collapse.js")
+    script(src="/js/libs/bootstrap/bootstrap-carousel.js")
+    script(src="/js/libs/bootstrap/bootstrap-typeahead.js")
