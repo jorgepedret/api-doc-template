@@ -1,8 +1,184 @@
 @import "bootstrap.less";
 body {
-  padding-top: 60px;
+  padding-top: 80px;
   padding-bottom: 40px;
+  font-size: 14px;
+  font-family: Helvetica, arial, sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 100;
+  margin: 0 0 25px 0;
+}
+h1 {
+  font-size: 48px;
+}
+h2 {
+  font-size: 36px;
+}
+h3 {
+  font-size: 30px;
+}
+h4 {
+  font-size: 24px;
+}
+h5 {
+  font-size: 18px;
+}
+p, blockquote{
+  line-height: 1.7em;
+  margin: 0 0 25px 0;
+}
+.navbar {
+  .brand {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 100;
+    strong {
+      font-weight: 500;
+      padding-right: 2px;
+    }
+    i {
+      margin-top: 3px;
+    }
+  }
 }
 .sidebar-nav {
-  padding: 9px 0;
+  padding: 0;
+  list-style: none;
+  a {
+    color: @grayDark;
+    line-height: 30px;
+    display: block;
+    margin-left: -15px;
+    &:hover {
+      background: @grayLighter;
+      text-decoration: none;
+    }
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  li {
+    padding: 0;
+    margin: 0;
+  }
+  > li {
+    a {
+      padding-left: 30px;
+    }
+    > a {
+      padding-left: 15px;
+      font-weight: bold;
+    }
+  }
+  .active {
+    > a, > a:hover {
+      background-color: @linkColor;
+      color: @white;
+    }
+  }
+}
+.eps {
+
+}
+.eps-index {
+  margin-bottom: 40px;
+  a {
+    color: @grayDark;
+  }
+  .ep {
+    margin-bottom: 1px;
+  }
+}
+.ep {
+  .clearfix;
+  background-color: @grayLighter;
+  padding: 5px;
+  margin-bottom: 5px;
+  .clearfix;
+}
+.ep-get {
+  background-color: @successBackground;
+  .ep-method {
+    background-color: @successText;
+  }
+}
+.ep-post {
+  background-color: @infoBackground;
+  .ep-method {
+    background-color: @infoText;
+  }
+}
+.ep-put {
+  background-color: @warningBackground;
+  .ep-method {
+    background-color: @orange;
+  }
+}
+.ep-delete {
+  background-color: @errorBackground;
+  .ep-method {
+    background-color: @errorText;
+  }
+}
+.ep-header {
+  .clearfix;
+}
+.ep-body {
+  margin-top: 5px;
+  clear: both;
+}
+.ep-curl,
+.ep-params {
+  background-color: @white;
+  padding: 5px;
+}
+.ep-curl {
+  position: relative;
+  .btn-response {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+  }
+}
+.ep-response {
+  margin-top: 5px;
+}
+.ep-curl-sample {
+  padding: 5px;
+  #font #family .monospace();
+}
+.ep-params {
+  header {
+    margin-bottom: 10px;
+  }
+  .key {
+    #font #family .monospace();
+  }
+}
+.ep-method {
+  background-color: @grayLight;
+  padding: 5px;
+  display: inline-block;
+  float: left;
+  margin-right: 1%;
+  width: 9%;
+  text-align: center;
+  #font #family .monospace();
+  color: @white;
+}
+.ep-path {
+  float: left;
+  margin-right: 1%;
+  width: 49%;
+  #font #family .monospace();
+  margin-top: 5px;
+}
+.ep-excerpt {
+  float: left;
+  width: 38%;
+  text-align: right;
+  margin-top: 5px;
 }

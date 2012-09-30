@@ -1,0 +1,56 @@
+header
+  h1 User Endpoints
+.body
+  p Optional description here
+  .eps-index
+    a(href="#")
+      .ep.ep-get
+        header.ep-header
+          .ep-method GET
+          .ep-path /account.json/{account_id}/profile
+          .ep-excerpt Get account profile
+    a(href="#")
+      .ep.ep-post
+        header.ep-header
+          .ep-method POST
+          .ep-path /account.json/{account_id}/profile
+          .ep-excerpt Get account profile
+    a(href="#")
+      .ep.ep-put
+        header.ep-header
+          .ep-method PUT
+          .ep-path /account.json/{account_id}/profile
+          .ep-excerpt Get account profile
+    a(href="#")
+      .ep.ep-delete
+        header.ep-header
+          .ep-method DELETE
+          .ep-path /account.json/{account_id}/profile
+          .ep-excerpt Get account profile
+  .eps
+    .ep.ep-get
+      header.ep-header
+        .ep-method GET
+        .ep-path /account.json/{account_id}/profile
+        .ep-excerpt Get account profile
+      .ep-body
+        .ep-curl
+          .row-fluid
+            .span10
+              .ep-curl-sample http://qa.binteo.net/account.json/123/profile
+            .span2
+              button.btn-response.btn(data-toggle="collapse", data-target="#response") Response <span class="caret"></span>
+          .row-fluid.ep-response#response.collapse
+            .span12
+                pre: code Response
+        .ep-params
+          header
+            strong Parameters
+          table.table.table-hover
+            tbody
+              tr
+                td.key Key
+                td.description Description
+
+
+

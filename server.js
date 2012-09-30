@@ -21,8 +21,22 @@ app.configure(function () {
   app.use(express.static(__dirname + "/public"))
 });
 
-app.get("/:page", function(req, rsp) {
-  rsp.render(req.params.page, {});
+app.get("/", function(req, rsp) {
+  rsp.render("home", {
+    active: "home"
+  });
+});
+
+app.get("/endpoints", function(req, rsp) {
+  rsp.render("endpoints", {
+    active: "endpoints"
+  });
+});
+
+app.get("/endpoints/users", function(req, rsp) {
+  rsp.render("users", {
+    active: "users"
+  });
 });
 
 // --------------------

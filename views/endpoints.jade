@@ -1,0 +1,13 @@
+h1 Binteo API Endpoints
+
+p All endpoints are accessible via http and located at qa.binteo.net. For instance: you can grab a list of your friends by accessing the following URL:
+
+pre: code http://qa.binteo.net/account.json/{profile_id}/friends?key=foobar
+
+p There are three different access levels for all  endpoints: <code>admin</code>, <code>user</code> and <code>public</code>. Some endpoints change their response depending on the type of token that you pass it.
+
+p The endpoints that require admin access will be marked with <code>admin security level</code> and to call the endpoint you need to pass it <code>?key=admin</code>
+
+p The endpoint that require user access will be marked with <code>user security level</code> and to call the endpoint you need to pass it the token returned when you login with that account <code>?token={your_account_token}</code>
+
+p The public endpoints will be marked as <code>public security level</code> and to call the endpoint you need to pass it <code>?key=foobar</code>
