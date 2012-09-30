@@ -33,9 +33,9 @@ app.get("/endpoints", function(req, rsp) {
   });
 });
 
-app.get("/endpoints/users", function(req, rsp) {
-  rsp.render("users", {
-    active: "users"
+app.get("/endpoints/profile", function(req, rsp) {
+  rsp.render("profile", {
+    active: "profile"
   });
 });
 

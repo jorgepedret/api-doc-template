@@ -4,19 +4,17 @@ ul.sidebar-nav
   li(class="#{ active === 'endpoints'?'active':'' }")
     a(href="/endpoints") Endpoints
     ul
-      li(class="#{ active === 'users'?'active':'' }")
-        a(href="/endpoints/users") Users
       li
-        a(href="/endpoints/users") Relationships
+        a(href="/endpoints/profile") General
       li
-        a(href="/endpoints/users") Media
+        a(href="/endpoints/profile") Activity
       li
-        a(href="/endpoints/users") Comments
+        a(href="/endpoints/profile") Directory
       li
-        a(href="/endpoints/users") Likes
+        a(href="/endpoints/profile") Likes
+      li(class="#{ active === 'profile'?'active':'' }")
+        a(href="/endpoints/profile") Profile
       li
-        a(href="/endpoints/users") Tags
+        a(href="/endpoints/profile") Registration &amp; Login
       li
-        a(href="/endpoints/users") Locations
-      li
-        a(href="/endpoints/users") Geographies
+        a(href="/endpoints/profile") Favorites
