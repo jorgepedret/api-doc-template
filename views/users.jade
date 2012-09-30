@@ -7,50 +7,365 @@ header
       .ep.ep-get
         header.ep-header
           .ep-method GET
-          .ep-path /account.json/{account_id}/profile
-          .ep-excerpt Get account profile
+          .ep-path /account.json/{account_id}/friends
+          .ep-excerpt Get account friends
     a(href="#")
-      .ep.ep-post
+      .ep.ep-put
         header.ep-header
-          .ep-method POST
+          .ep-method PUT
+          .ep-path /account.json/{account_id}/avatar
+          .ep-excerpt Update account avatar
+    a(href="#")
+      .ep.ep-put
+        header.ep-header
+          .ep-method PUT
+          .ep-path /account.json/{account_id}/profile
+          .ep-excerpt Update account profile
+    a(href="#")
+      .ep.ep-get
+        header.ep-header
+          .ep-method GET
           .ep-path /account.json/{account_id}/profile
           .ep-excerpt Get account profile
     a(href="#")
       .ep.ep-put
         header.ep-header
           .ep-method PUT
-          .ep-path /account.json/{account_id}/profile
-          .ep-excerpt Get account profile
+          .ep-path /account.json/{account_id}
+          .ep-excerpt Account update
     a(href="#")
-      .ep.ep-delete
+      .ep.ep-get
         header.ep-header
-          .ep-method DELETE
-          .ep-path /account.json/{account_id}/profile
-          .ep-excerpt Get account profile
+          .ep-method GET
+          .ep-path /account.json/{account_id}/posts
+          .ep-excerpt Get posts by user
+    a(href="#")
+      .ep.ep-get
+        header.ep-header
+          .ep-method GET
+          .ep-path /profile.json/{username}
+          .ep-excerpt Get account profile by username
   .eps
     .ep.ep-get
       header.ep-header
         .ep-method GET
-        .ep-path /account.json/{account_id}/profile
-        .ep-excerpt Get account profile
+        .ep-path /account.json/{account_id}/friends
+        .ep-excerpt Get account friends
       .ep-body
-        .ep-curl
-          .row-fluid
-            .span10
-              .ep-curl-sample http://qa.binteo.net/account.json/123/profile
-            .span2
-              button.btn-response.btn(data-toggle="collapse", data-target="#response") Response <span class="caret"></span>
-          .row-fluid.ep-response#response.collapse
-            .span12
-                pre: code Response
         .ep-params
           header
             strong Parameters
           table.table.table-hover
             tbody
               tr
-                td.key Key
-                td.description Description
+                td.key key
+                td.description foobar
+        .ep-curl
+          button.btn-response.btn(data-toggle="collapse", data-target="#response") Sample Response <span class="caret"></span>
+          .ep-response#response.collapse
+            pre: code.
+              curl http://qa.binteo.net/account.json/4fb40878493c45e16b2fdda3/friends?key=foobar
+              [{
+                "id":"4fc59bb4493ce61e8d60e66e",
+                "avatar":"http://foobar.com/image.png",
+                "name":"Felipe Oliveira",
+                "nick":"Felipe Oliveira"
+              },{ ... }]
+    .ep.ep-put
+      header.ep-header
+        .ep-method PUT
+        .ep-path /account.json/{account_id}/avatar
+        .ep-excerpt Update account avatar
+      .ep-body
+        .ep-params
+          header
+            strong Parameters
+          table.table.table-hover
+            tbody
+              tr
+                td.key token_id
+                td.description Account token id
+        .ep-curl
+          button.btn-response.btn(data-toggle="collapse", data-target="#response2") Sample Response <span class="caret"></span>
+          .ep-response#response2.collapse
+            pre: code.
+              curl -X PUT http://qa.binteo.net/account.json/4fb40878493c45e16b2fdda3/avatar?token={token_id} - d '{ contents: ... }'
 
+              {
+                "id":"5006444b493c15eddec12cc1",
+                "username":"ffflekkkjfelfff3Felipe",
+                "name":"Felipe Oliveira",
+                "avatar":"http://fs.binteo.net/avatar-5006444b493c15eddec12cc1-1348988412594.png",
+                "thumbnail":"http://fs.binteo.net/profile-thumbnail-5006444b493c15eddec12cc1-1348988412604.png",
+                "bio":"I love to code",
+                "points":0,
+                "location":"San Francisco, CA",
+                "level":"Basic",
+                "dateOfBirth":"03/30/1982",
+                "groups":[],
+                "networks":[{
+                  "id":"4fb01544e4b095e63d367bb8",
+                  "name":"Cooking",
+                  "image":"http://fs.binteo.net/network-4fb01544e4b095e63d367bb8-1347065124880.png"
+                },{ ... }],
+                "friends":[],
+                "isSelf":true,
+                "isFriend":false,
+                "canEdit":true
+              }
+    .ep.ep-put
+      header.ep-header
+        .ep-method PUT
+        .ep-path /account.json/{account_id}/profile
+        .ep-excerpt Update account profile
+      .ep-body
+        .ep-params
+          header
+            strong Parameters
+          table.table.table-hover
+            tbody
+              tr
+                td.key token_id
+                td.description Account token id
+        .ep-curl
+          button.btn-response.btn(data-toggle="collapse", data-target="#response3") Sample Response <span class="caret"></span>
+          .ep-response#response3.collapse
+            pre: code.
+              curl -X PUT http://qa.binteo.net/account.json/4fb40878493c45e16b2fdda3/profile?token={token_id} - d '{
+                "location": "San Francisco",
+                "bio": "I am awesome",
+                "dateOfBirth": "03/30/1982"
+              }'
 
+              {
+                "id":"5006444b493c15eddec12cc1",
+                "username":"ffflekkkjfelfff3Felipe",
+                "name":"Felipe Oliveira",
+                "avatar":"http://fs.binteo.net/avatar-5006444b493c15eddec12cc1-1348988412594.png",
+                "thumbnail":"http://fs.binteo.net/profile-thumbnail-5006444b493c15eddec12cc1-1348988412604.png",
+                "bio":"I love to code",
+                "points":0,
+                "location":"San Francisco, CA",
+                "level":"Basic",
+                "dateOfBirth":"03/30/1982",
+                "groups":[],
+                "networks":[{
+                  "id":"4fb01544e4b095e63d367bb8",
+                  "name":"Cooking",
+                  "image":"http://fs.binteo.net/network-4fb01544e4b095e63d367bb8-1347065124880.png"
+                },{ ... }],
+                "friends":[],
+                "isSelf":true,
+                "isFriend":false,
+                "canEdit":true
+              }
+    .ep.ep-get
+      header.ep-header
+        .ep-method GET
+        .ep-path /account.json/{account_id}/profile
+        .ep-excerpt Get account profile
+      .ep-body
+        .ep-params
+          header
+            strong Parameters
+          table.table.table-hover
+            tbody
+              tr
+                td.key token
+                td.description Account's token id
+        .ep-curl
+          button.btn-response.btn(data-toggle="collapse", data-target="#response4") Sample Response <span class="caret"></span>
+          .ep-response#response4.collapse
+            pre: code.
+              curl http://qa.binteo.net/account.json/4fb40878493c45e16b2fdda3/profile?token={token_id}
 
+              {
+                "id":"4fb40878493c45e16b2fdda3",
+                "username":"Felipe Oliveira",
+                "name":"Felipe Oliveira",
+                "avatar":"http://foobar.com/image.png",
+                "thumbnail":"n/a",
+                "bio":"n/a",
+                "points":0,
+                "location":"San Francisco, CA",
+                "level":"Diamond",
+                "groups":[{
+                  "id":"4fb3fd45493c45e16b2fdda1",
+                  "name":"ffMyk Gkoup Update",
+                  "slug":"my_group",
+                  "avatar":"http://fs.binteo.net/8bbc022e-e4c8-4f3f-8b9a-cb1a152a6bb5.png.png"
+                },{ ... }],
+                "friends":[{
+                  "id":"4fc59bb4493ce61e8d60e66e",
+                  "avatar":"http://foobar.com/image.png",
+                  "name":"Felipe Oliveira",
+                  "nick":"Felipe Oliveira"
+                },{ ... }],
+                "isSelf":false,
+                "isFriend":false,
+                "canEdit":false
+              }
+    .ep.ep-put
+      header.ep-header
+        .ep-method PUT
+        .ep-path /account.json/{account_id}
+        .ep-excerpt Account update
+      .ep-body
+        .ep-params
+          header
+            strong Parameters
+          table.table.table-hover
+            tbody
+              tr
+                td.key token
+                td.description Account's token id
+        .ep-curl
+          button.btn-response.btn(data-toggle="collapse", data-target="#response5") Sample Response <span class="caret"></span>
+          .ep-response#response5.collapse
+            pre: code.
+              curl -X PUT http://qa.binteo.net/account.json/4fb40878493c45e16b2fdda3?token={token_id} -d '{
+                "username": "Felipe",
+                "password" : "foobar",
+                "accountType" : "mentor",
+                "avatar" : "http://foobar.com/image.png",
+                "email" : "felipe@foobar.com",
+                "name" : "Felipe 3 Oliveira",
+                "location" : "San Francisco, CA",
+                "points" : 0,
+                "level" : "Diamond"
+              }'
+
+              {  "header":{    "status":200,    "headers":{      "Content-Type":"text/plain; charset=utf-8"    }  },  "body":{      },  "writeable":{
+                  "transform":{
+                    
+                  }
+                }
+              }
+    .ep.ep-get
+      header.ep-header
+        .ep-method GET
+        .ep-path /account.json/{account_id}/posts
+        .ep-excerpt Get posts by user
+      .ep-body
+        .ep-params
+          header
+            strong Parameters
+          table.table.table-hover
+            tbody
+              tr
+                td.key token
+                td.description Account's token id
+              tr
+                td.key limit
+                td.description The number of posts that you want returned
+              tr
+                td.key cursor
+                td.description The item of the last element listed (user for pagination)
+        .ep-curl
+          button.btn-response.btn(data-toggle="collapse", data-target="#response6") Sample Response <span class="caret"></span>
+          .ep-response#response6.collapse
+            pre: code.
+              curl http://qa.binteo.net/account.json/5004ec4be4b0db51d8352baa/posts?key=foobar&limit=2&cursor=5010d99d493c2f83abb07efe
+              
+              {
+                "items":[{
+                  "_id":"505fc6c6493cf91d7d79afd5",
+                  "profile":{
+                    "id":"5004ec4be4b0db51d8352baa",
+                    "username":"flekkkjfelfff3Ffelipe",
+                    "name":"flekkkjfelfff3Ffelipe",
+                    "avatar":"http://www.eastcoastdsm.org/forum/images/misc/default_avatar.gif",
+                    "thumbnail":"n/a",
+                    "bio":"n/a",
+                    "points":0,
+                    "location":"n/a",
+                    "level":"Basic",
+                    "groups":[{
+                      "id":"4fb3fd45493c45e16b2fdda1",
+                      "name":"ffMyk Gkoup Update",
+                      "slug":"my_group",
+                      "avatar":"http://fs.binteo.net/8bbc022e-e4c8-4f3f-8b9a-cb1a152a6bb5.png.png"
+                    }],
+                    "networks":[{
+                      "id":"4fb01544e4b095e63d367bb8",
+                      "name":"Cooking",
+                      "image":"http://fs.binteo.net/network-4fb01544e4b095e63d367bb8-1347065124880.png"
+                    },{
+                      "id":"4fb015bee4b095e63d367bb9",
+                      "name":"MMA",
+                      "image":"http://fs.binteo.net/network-4fb015bee4b095e63d367bb9-1347065124904.png"
+                    }],
+                    "friends":[],
+                    "isSelf":false,
+                    "isFriend":false,
+                    "canEdit":false
+                  },
+                  "title":"Foobar",
+                  "description":"This is what I am all about son!",
+                  "postType":"foobar",
+                  "subjects":[{
+                    "_id":"4fb01544e4b095e63d367bb8",
+                    "entityType":"network",
+                    "data":{
+                      "_id":"4fb01544e4b095e63d367bb8",
+                      "name":"Cooking",
+                      "image":"http://fs.binteo.net/network-4fb01544e4b095e63d367bb8-1347065124880.png"
+                    }
+                  }],
+                  "tags":["tag1","tag2"],
+                  "comments":[],
+                  "createdAt":"1348454086752",
+                  "isFavorite":false,
+                  "canEdit":false,
+                  "isOwner":false,
+                  "liked":false,
+                  "likes":0
+                },{ ... }]
+              }
+    .ep.ep-get
+      header.ep-header
+        .ep-method GET
+        .ep-path /profile.json/{username}
+        .ep-excerpt Get account profile by username
+      .ep-body
+        .ep-params
+          header
+            strong Parameters
+          table.table.table-hover
+            tbody
+              tr
+                td.key token
+                td.description Account's token id
+        .ep-curl
+          button.btn-response.btn(data-toggle="collapse", data-target="#response7") Sample Response <span class="caret"></span>
+          .ep-response#response7.collapse
+            pre: code.
+              curl http://qa.binteo.net/profile.json/logixz?key=foobar
+              
+              {
+                "id":"5022c84ae4b00c60ce616886",
+                "username":"logixz",
+                "name":"logixz",
+                "avatar":"http://fs.binteo.net/avatar-5022c84ae4b00c60ce616886-1348443904317.png",
+                "thumbnail":"http://fs.binteo.net/profile-thumbnail-5022c84ae4b00c60ce616886-1348443904320.png",
+                "bio":"I am awesome",
+                "points":0,
+                "location":"asodjfwiefoiweasdoif=9asdfjpoiasdf",
+                "level":"Basic",
+                "dateOfBirth":"undefined",
+                "groups":[],
+                "networks":[{
+                  "id":"4fb015bee4b095e63d367bb9",
+                  "name":"MMA",
+                  "image":"http://fs.binteo.net/network-4fb015bee4b095e63d367bb9-1347065124904.png"
+                },{ ... }],
+                "friends":[{
+                  "id":"4fceeaa3493c4f2fd7242d33",
+                  "avatar":"http://www.eastcoastdsm.org/forum/images/misc/default_avatar.gif",
+                  "name":"Felipe",
+                  "nick":"Felipe"
+                },{ ... }],
+                "isSelf":false,
+                "isFriend":false,
+                "canEdit":false
+              }

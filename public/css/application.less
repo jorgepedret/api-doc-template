@@ -45,6 +45,7 @@ p, blockquote{
 .sidebar-nav {
   padding: 0;
   list-style: none;
+  margin: 0;
   a {
     color: @grayDark;
     line-height: 30px;
@@ -96,7 +97,7 @@ p, blockquote{
   .clearfix;
   background-color: @grayLighter;
   padding: 5px;
-  margin-bottom: 5px;
+  margin-bottom: 20px;
   .clearfix;
 }
 .ep-get {
@@ -133,15 +134,10 @@ p, blockquote{
 .ep-curl,
 .ep-params {
   background-color: @white;
-  padding: 5px;
+  padding: 10px;
 }
 .ep-curl {
   position: relative;
-  .btn-response {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-  }
 }
 .ep-response {
   margin-top: 5px;
@@ -151,10 +147,15 @@ p, blockquote{
   #font #family .monospace();
 }
 .ep-params {
+  margin-bottom: 5px;
   header {
     margin-bottom: 10px;
   }
+  table {
+    margin-bottom: 0;
+  }
   .key {
+    width: 20%;
     #font #family .monospace();
   }
 }
