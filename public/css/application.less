@@ -28,6 +28,15 @@ p, blockquote{
   line-height: 1.7em;
   margin: 0 0 25px 0;
 }
+pre {
+  .border-radius(0);
+  border: none;
+  background: @linkColor;
+  color: @white;
+}
+code {
+  border: none;
+}
 .navbar {
   .brand {
     color: #fff;
@@ -85,41 +94,64 @@ p, blockquote{
 
 }
 .eps-index {
-  margin-bottom: 40px;
+  margin-bottom: 60px;
   a {
     color: @grayDark;
+    display: block;
+    margin-bottom: 5px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &:hover {
+      .ep-get {
+        background-color: lighten(@successBackground, 3%);
+      }
+      .ep-post {
+        background-color: lighten(@infoBackground, 3%);
+      }
+      .ep-put {
+        background-color: lighten(@warningBackground, 3%);
+      }
+      .ep-delete {
+        background-color: lighten(@errorBackground, 3%);
+      }
+    }
   }
   .ep {
-    margin-bottom: 5px;
+    margin-bottom: 0;
   }
 }
 .ep {
   .clearfix;
   background-color: @grayLighter;
   padding: 5px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   .clearfix;
 }
 .ep-get {
   background-color: @successBackground;
+  border-color: lighten(@successText, 40%);
   .ep-method {
     background-color: @successText;
   }
 }
 .ep-post {
   background-color: @infoBackground;
+  border-color: lighten(@infoText, 40%);
   .ep-method {
     background-color: @infoText;
   }
 }
 .ep-put {
   background-color: @warningBackground;
+  border-color: lighten(@orange, 35%);
   .ep-method {
     background-color: @orange;
   }
 }
 .ep-delete {
   background-color: @errorBackground;
+  border-color: lighten(@errorText, 40%);
   .ep-method {
     background-color: @errorText;
   }
@@ -131,6 +163,7 @@ p, blockquote{
   margin-top: 5px;
   clear: both;
 }
+.ep-description,
 .ep-curl,
 .ep-params {
   background-color: @white;
@@ -172,14 +205,19 @@ p, blockquote{
 }
 .ep-path {
   float: left;
-  margin-right: 1%;
-  width: 49%;
+  width: 88%;
   #font #family .monospace();
   margin-top: 5px;
 }
-.ep-excerpt {
-  float: left;
-  width: 38%;
-  text-align: right;
-  margin-top: 5px;
+.ep-short {
+  .ep-path {
+    width: 50%;
+    margin-right: 1%;
+  }
+  .ep-excerpt {
+    float: left;
+    width: 37%;
+    text-align: right;
+    margin-top: 5px;
+  }
 }
