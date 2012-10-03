@@ -1,5 +1,4 @@
 var express     = require("express");
-var RedisStore  = require('connect-redis')(express);
 var jade        = require("jade");
 var port        = process.env.PORT || 8001;
 var app         = express.createServer();
@@ -16,7 +15,7 @@ app.configure(function () {
   app.set('view options', { layout: "layouts/application", pretty: true });
   app.use(express.bodyParser());
   app.use(express.cookieParser());
-  app.use(express.session({ secret: "b2669a83", store: new RedisStore }));
+  app.use(express.session({cookie: { path: '/', httpOnly: true, maxAge: null }, secret:'ahloco'}));
   app.use(express.methodOverride())
   app.use(express.static(__dirname + "/public"))
 });
