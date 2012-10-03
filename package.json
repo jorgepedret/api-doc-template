@@ -1,5 +1,4 @@
 {
-  "name": "api-doc-template",
   "description": "API Doc Template",
   "version": "0.0.1",
   "dependencies": {
@@ -9,5 +8,10 @@
   "engines": {
     "node": "0.8.x",
     "npm": "1.1.x"
-  }
+  },
+  "subdomain": "apidoc2",
+  "scripts": {
+    "start": "server.js"
+  },
+  "name": "apidoctemplate2"
 }
