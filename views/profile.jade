@@ -3,50 +3,50 @@ header
 .body
   p Optional description here
   .eps-index
-    a(href="#")
+    a(href="#ep1")
       .ep.ep-short.ep-get
         header.ep-header
           .ep-method GET
           .ep-path /account.json/{account_id}/friends
           .ep-excerpt Get account friends
-    a(href="#")
+    a(href="#ep2")
       .ep.ep-short.ep-put
         header.ep-header
           .ep-method PUT
           .ep-path /account.json/{account_id}/avatar
           .ep-excerpt Update account avatar
-    a(href="#")
+    a(href="#ep3")
       .ep.ep-short.ep-put
         header.ep-header
           .ep-method PUT
           .ep-path /account.json/{account_id}/profile
           .ep-excerpt Update account profile
-    a(href="#")
+    a(href="#ep4")
       .ep.ep-short.ep-get
         header.ep-header
           .ep-method GET
           .ep-path /account.json/{account_id}/profile
           .ep-excerpt Get account profile
-    a(href="#")
+    a(href="#ep5")
       .ep.ep-short.ep-put
         header.ep-header
           .ep-method PUT
           .ep-path /account.json/{account_id}
           .ep-excerpt Account update
-    a(href="#")
+    a(href="#ep6")
       .ep.ep-short.ep-get
         header.ep-header
           .ep-method GET
           .ep-path /account.json/{account_id}/posts
           .ep-excerpt Get posts by user
-    a(href="#")
+    a(href="#ep7")
       .ep.ep-short.ep-get
         header.ep-header
           .ep-method GET
           .ep-path /profile.json/{username}
           .ep-excerpt Get account profile by username
   .eps
-    .ep.ep-get
+    .ep.ep-get#ep1
       header.ep-header
         .ep-method GET
         .ep-path /account.json/{account_id}/friends
@@ -61,17 +61,20 @@ header
                 td.key key
                 td.description foobar
         .ep-curl
-          button.btn-response.btn(data-toggle="collapse", data-target="#response") Sample Response <span class="caret"></span>
+          button.btn-response.btn(data-toggle="collapse", data-target="#response") Sample Request <span class="caret"></span>
           .ep-response#response.collapse
+            span Curl Request:
             pre: code.
               curl http://qa.binteo.net/account.json/4fb40878493c45e16b2fdda3/friends?key=foobar
+            span Sample Response:
+            pre: code.
               [{
                 "id":"4fc59bb4493ce61e8d60e66e",
                 "avatar":"http://foobar.com/image.png",
                 "name":"Felipe Oliveira",
                 "nick":"Felipe Oliveira"
               },{ ... }]
-    .ep.ep-put
+    .ep.ep-put#ep2
       header.ep-header
         .ep-method PUT
         .ep-path /account.json/{account_id}/avatar
@@ -86,11 +89,13 @@ header
                 td.key token_id
                 td.description Account token id
         .ep-curl
-          button.btn-response.btn(data-toggle="collapse", data-target="#response2") Sample Response <span class="caret"></span>
+          button.btn-response.btn(data-toggle="collapse", data-target="#response2") Sample Request <span class="caret"></span>
           .ep-response#response2.collapse
+            span Curl Request:
             pre: code.
               curl -X PUT http://qa.binteo.net/account.json/4fb40878493c45e16b2fdda3/avatar?token={token_id} - d '{ contents: ... }'
-
+            span Sample Response:
+            pre: code.
               {
                 "id":"5006444b493c15eddec12cc1",
                 "username":"ffflekkkjfelfff3Felipe",
@@ -113,7 +118,7 @@ header
                 "isFriend":false,
                 "canEdit":true
               }
-    .ep.ep-put
+    .ep.ep-put#ep3
       header.ep-header
         .ep-method PUT
         .ep-path /account.json/{account_id}/profile
@@ -128,15 +133,17 @@ header
                 td.key token_id
                 td.description Account token id
         .ep-curl
-          button.btn-response.btn(data-toggle="collapse", data-target="#response3") Sample Response <span class="caret"></span>
+          button.btn-response.btn(data-toggle="collapse", data-target="#response3") Sample Request <span class="caret"></span>
           .ep-response#response3.collapse
+            span Curl Request:
             pre: code.
               curl -X PUT http://qa.binteo.net/account.json/4fb40878493c45e16b2fdda3/profile?token={token_id} - d '{
                 "location": "San Francisco",
                 "bio": "I am awesome",
                 "dateOfBirth": "03/30/1982"
               }'
-
+            span Sample Response:
+            pre: code.
               {
                 "id":"5006444b493c15eddec12cc1",
                 "username":"ffflekkkjfelfff3Felipe",
@@ -159,7 +166,7 @@ header
                 "isFriend":false,
                 "canEdit":true
               }
-    .ep.ep-get
+    .ep.ep-get#ep4
       header.ep-header
         .ep-method GET
         .ep-path /account.json/{account_id}/profile
@@ -174,11 +181,14 @@ header
                 td.key token
                 td.description Account's token id
         .ep-curl
-          button.btn-response.btn(data-toggle="collapse", data-target="#response4") Sample Response <span class="caret"></span>
+          button.btn-response.btn(data-toggle="collapse", data-target="#response4") Sample Request <span class="caret"></span>
           .ep-response#response4.collapse
+            span Curl Request:
             pre: code.
               curl http://qa.binteo.net/account.json/4fb40878493c45e16b2fdda3/profile?token={token_id}
-
+            
+            span Sample Response:
+            pre: code.
               {
                 "id":"4fb40878493c45e16b2fdda3",
                 "username":"Felipe Oliveira",
@@ -205,7 +215,7 @@ header
                 "isFriend":false,
                 "canEdit":false
               }
-    .ep.ep-put
+    .ep.ep-put#ep5
       header.ep-header
         .ep-method PUT
         .ep-path /account.json/{account_id}
@@ -220,8 +230,9 @@ header
                 td.key token
                 td.description Account's token id
         .ep-curl
-          button.btn-response.btn(data-toggle="collapse", data-target="#response5") Sample Response <span class="caret"></span>
+          button.btn-response.btn(data-toggle="collapse", data-target="#response5") Sample Request <span class="caret"></span>
           .ep-response#response5.collapse
+            span Curl Request:
             pre: code.
               curl -X PUT http://qa.binteo.net/account.json/4fb40878493c45e16b2fdda3?token={token_id} -d '{
                 "username": "Felipe",
@@ -234,14 +245,15 @@ header
                 "points" : 0,
                 "level" : "Diamond"
               }'
-
+            span Sample Response:
+            pre: code.
               {  "header":{    "status":200,    "headers":{      "Content-Type":"text/plain; charset=utf-8"    }  },  "body":{      },  "writeable":{
                   "transform":{
                     
                   }
                 }
               }
-    .ep.ep-get
+    .ep.ep-get#ep6
       header.ep-header
         .ep-method GET
         .ep-path /account.json/{account_id}/posts
@@ -262,11 +274,13 @@ header
                 td.key cursor
                 td.description The item of the last element listed (user for pagination)
         .ep-curl
-          button.btn-response.btn(data-toggle="collapse", data-target="#response6") Sample Response <span class="caret"></span>
+          button.btn-response.btn(data-toggle="collapse", data-target="#response6") Sample Request <span class="caret"></span>
           .ep-response#response6.collapse
+            span Curl Request:
             pre: code.
               curl http://qa.binteo.net/account.json/5004ec4be4b0db51d8352baa/posts?key=foobar&limit=2&cursor=5010d99d493c2f83abb07efe
-              
+            span Sample Response:
+            pre: code.
               {
                 "items":[{
                   "_id":"505fc6c6493cf91d7d79afd5",
@@ -322,7 +336,7 @@ header
                   "likes":0
                 },{ ... }]
               }
-    .ep.ep-get
+    .ep.ep-get#ep7
       header.ep-header
         .ep-method GET
         .ep-path /profile.json/{username}
@@ -337,11 +351,13 @@ header
                 td.key token
                 td.description Account's token id
         .ep-curl
-          button.btn-response.btn(data-toggle="collapse", data-target="#response7") Sample Response <span class="caret"></span>
+          button.btn-response.btn(data-toggle="collapse", data-target="#response7") Sample Request <span class="caret"></span>
           .ep-response#response7.collapse
+            span Curl Request:
             pre: code.
               curl http://qa.binteo.net/profile.json/logixz?key=foobar
-              
+            span Sample Response:
+            pre: code.
               {
                 "id":"5022c84ae4b00c60ce616886",
                 "username":"logixz",

@@ -31,11 +31,14 @@ p, blockquote{
 pre {
   .border-radius(0);
   border: none;
-  background: @linkColor;
-  color: @white;
+  background: @grayLighter;
+  // color: @white;
 }
 code {
   border: none;
+}
+.btn {
+  .border-radius(0);
 }
 .navbar {
   .brand {
@@ -162,18 +165,19 @@ code {
 .ep-body {
   margin-top: 5px;
   clear: both;
+  background-color: @white;
 }
 .ep-description,
 .ep-curl,
 .ep-params {
-  background-color: @white;
+  
   padding: 10px;
 }
 .ep-curl {
   position: relative;
 }
 .ep-response {
-  margin-top: 5px;
+  margin-top: 10px;
 }
 .ep-curl-sample {
   padding: 5px;

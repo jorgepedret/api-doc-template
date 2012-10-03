@@ -6,12 +6,21 @@ header#header
           span.icon-bar
           span.icon-bar
           span.icon-bar
-        a.brand(href="#") <i class="icon-home icon-white"></i> <strong>API</strong>me
+        a.brand(href="#") <i class="icon-home icon-white"></i> <strong>Binteo</strong> API
         .nav-collapse.collapse
           ul.nav
-            li
-              a(href="#") <i class="icon-pencil icon-white"></i> Endpoints
-            li
-              a(href="#about") <i class="icon-user icon-white"></i> Sharing
-            li
-              a(href="#contact") <i class="icon-cog icon-white"></i> Settings
+            li.dropdown
+              a.dropdown-toggle(href="#", data-toggle="dropdown") Endpoints <b class="caret"></b>
+              ul.dropdown-menu
+                li: a(href="#") General
+                li: a(href="#") Activity
+                li: a(href="#") Directory
+                li: a(href="#") Likes
+                li: a(href="#") Profile
+                li: a(href="#") Registration &amp; Login
+                li: a(href="#") Favorites
+            li.dropdown
+              a.dropdown-toggle(href="#", data-toggle="dropdown") Options <b class="caret"></b>
+              ul.dropdown-menu
+                li: a(href="#") Sharing
+                li: a(href="#") Settings
