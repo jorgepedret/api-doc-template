@@ -1,0 +1,22 @@
+{
+  "id":"5006444b493c15eddec12cc1",
+  "username":"ffflekkkjfelfff3Felipe",
+  "name":"Felipe Oliveira",
+  "avatar":"http://fs.binteo.net/avatar-5006444b493c15eddec12cc1-1348988412594.png",
+  "thumbnail":"http://fs.binteo.net/profile-thumbnail-5006444b493c15eddec12cc1-1348988412604.png",
+  "bio":"I love to code",
+  "points":0,
+  "location":"San Francisco, CA",
+  "level":"Basic",
+  "dateOfBirth":"03/30/1982",
+  "groups":[],
+  "networks":[{
+    "id":"4fb01544e4b095e63d367bb8",
+    "name":"Cooking",
+    "image":"http://fs.binteo.net/network-4fb01544e4b095e63d367bb8-1347065124880.png"
+  },{ ... }],
+  "friends":[],
+  "isSelf":true,
+  "isFriend":false,
+  "canEdit":true
+}

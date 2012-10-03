@@ -1,0 +1,55 @@
+{
+  "items":[{
+    "_id":"505fc6c6493cf91d7d79afd5",
+    "profile":{
+      "id":"5004ec4be4b0db51d8352baa",
+      "username":"flekkkjfelfff3Ffelipe",
+      "name":"flekkkjfelfff3Ffelipe",
+      "avatar":"http://www.eastcoastdsm.org/forum/images/misc/default_avatar.gif",
+      "thumbnail":"n/a",
+      "bio":"n/a",
+      "points":0,
+      "location":"n/a",
+      "level":"Basic",
+      "groups":[{
+        "id":"4fb3fd45493c45e16b2fdda1",
+        "name":"ffMyk Gkoup Update",
+        "slug":"my_group",
+        "avatar":"http://fs.binteo.net/8bbc022e-e4c8-4f3f-8b9a-cb1a152a6bb5.png.png"
+      }],
+      "networks":[{
+        "id":"4fb01544e4b095e63d367bb8",
+        "name":"Cooking",
+        "image":"http://fs.binteo.net/network-4fb01544e4b095e63d367bb8-1347065124880.png"
+      },{
+        "id":"4fb015bee4b095e63d367bb9",
+        "name":"MMA",
+        "image":"http://fs.binteo.net/network-4fb015bee4b095e63d367bb9-1347065124904.png"
+      }],
+      "friends":[],
+      "isSelf":false,
+      "isFriend":false,
+      "canEdit":false
+    },
+    "title":"Foobar",
+    "description":"This is what I am all about son!",
+    "postType":"foobar",
+    "subjects":[{
+      "_id":"4fb01544e4b095e63d367bb8",
+      "entityType":"network",
+      "data":{
+        "_id":"4fb01544e4b095e63d367bb8",
+        "name":"Cooking",
+        "image":"http://fs.binteo.net/network-4fb01544e4b095e63d367bb8-1347065124880.png"
+      }
+    }],
+    "tags":["tag1","tag2"],
+    "comments":[],
+    "createdAt":"1348454086752",
+    "isFavorite":false,
+    "canEdit":false,
+    "isOwner":false,
+    "liked":false,
+    "likes":0
+  },{ ... }]
+}

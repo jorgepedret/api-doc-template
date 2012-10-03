@@ -1,0 +1,11 @@
+curl -X PUT http://qa.binteo.net/account.json/4fb40878493c45e16b2fdda3?token={token_id} -d '{
+  "username": "Felipe",
+  "password" : "foobar",
+  "accountType" : "mentor",
+  "avatar" : "http://foobar.com/image.png",
+  "email" : "felipe@foobar.com",
+  "name" : "Felipe 3 Oliveira",
+  "location" : "San Francisco, CA",
+  "points" : 0,
+  "level" : "Diamond"
+}'

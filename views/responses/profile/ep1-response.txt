@@ -1,0 +1,6 @@
+[{
+  "id":"4fc59bb4493ce61e8d60e66e",
+  "avatar":"http://foobar.com/image.png",
+  "name":"Felipe Oliveira",
+  "nick":"Felipe Oliveira"
+},{ ... }]

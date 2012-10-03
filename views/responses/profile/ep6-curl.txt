@@ -1,0 +1,1 @@
+curl http://qa.binteo.net/account.json/5004ec4be4b0db51d8352baa/posts?key=foobar&limit=2&cursor=5010d99d493c2f83abb07efe

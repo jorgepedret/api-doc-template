@@ -1,0 +1,1 @@
+curl -X PUT http://qa.binteo.net/account.json/4fb40878493c45e16b2fdda3/avatar?token={token_id} - d '{ contents: ... }'
