@@ -1,1 +1,0 @@
-curl http://qa.binteo.net/account.json/4fb40878493c45e16b2fdda3/friends?key=foobar

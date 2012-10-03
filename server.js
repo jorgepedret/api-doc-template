@@ -32,9 +32,9 @@ app.get("/endpoints", function(req, rsp) {
   });
 });
 
-app.get("/endpoints/profile", function(req, rsp) {
-  rsp.render("profile", {
-    active: "profile"
+app.get("/endpoints/likes", function(req, rsp) {
+  rsp.render("likes", {
+    active: "likes"
   });
 });
 

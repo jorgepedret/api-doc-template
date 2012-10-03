@@ -1,5 +1,0 @@
-curl -X PUT http://qa.binteo.net/account.json/4fb40878493c45e16b2fdda3/profile?token={token_id} - d '{
-  "location": "San Francisco",
-  "bio": "I am awesome",
-  "dateOfBirth": "03/30/1982"
-}'
